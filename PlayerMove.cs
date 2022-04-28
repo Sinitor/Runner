@@ -38,6 +38,14 @@ public class PlayerMove : MonoBehaviour
             {
                 move = 2f;
             }
-        }
+        } 
+         if (move == 1f && transform.position.x >= -4)
+            {
+                player.transform.Translate(Vector2.left * (swipeSpeed * Time.deltaTime));
+            }
+            if (move == 2f && transform.position.x <= 4)
+            {
+                player.transform.Translate(Vector2.right * (swipeSpeed * Time.deltaTime));
+            }
     }
 }
